@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil Profesional</title>
+    <meta name="author" content="Tu Nombre Completo">
+    <meta name="description" content="Página personal creada con HTML">
+
+    <!-- CSS -->
+    <style>
+        /* ----- Comunes ----- */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #222222;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #000000;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        /* ----- Encabezado ----- */
+        header {
+            background-color: #ff7b00;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header blockquote {
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            margin: 15px auto;
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        /* ----- Navegación ----- */
+        nav {
+            background-color: #131313;
+            text-align: center;
+            padding: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #ff7b00;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        /* ----- Contenido principal ----- */
+        main {
+            width: 85%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px 40px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+
+        img {
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        dl dt {
+            font-weight: bold;
+            color: #ff7b00;
+        }
+
+        dl dd {
+            margin-bottom: 8px;
+        }
+
+        span {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* ----- Listas ----- */
+        ol,
+        ul {
+            margin-left: 25px;
+        }
+
+        ul li,
+        ol li {
+            margin-bottom: 5px;
+        }
+
+        mark {
+            background-color: #fff176;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* ----- Enlaces externos ----- */
+        a[target="_blank"] {
+            color: #007bff;
+        }
+
+        a[target="_blank"]:hover {
+            text-decoration: underline;
+        }
+
+        /* ----- Iframe ----- */
+        iframe {
+            border-radius: 10px;
+            border: 2px solid #004080;
+            margin-top: 10px;
+        }
+
+        /* ----- Pie de página ----- */
+        footer {
+            background-color: #ff7b00;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer small {
+            color: #3f3f3f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><span style="color: #ffffff;"> Perfil Profesional</span></h1>
+        <blockquote>“El éxito no es la clave de la felicidad. La felicidad es la clave del éxito.” – Albert Schweitzer
+        </blockquote>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#datos">Datos personales</a> |
+        <a href="#formacion">Formación</a> |
+        <a href="#habilidades">Habilidades</a> |
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main>
+
+        <!-- Sección de datos personales -->
+        <!-- Sección de datos personales -->
+        <section id="datos">
+            <h2>Datos Personales</h2>
+            <hr>
+
+            <div>
+                <img src="https://via.placeholder.com/150" alt="Foto personal" title="Tu nombre" width="150"
+                    height="150">
+                <dl>
+                    <dt><strong>Nombre:</strong></dt>
+                    <dd>Javier Romero Cantero</dd>
+                    <dt><strong>Edad:</strong></dt>
+                    <dd>19 años</dd>
+                    <dt><strong>Ciudad:</strong></dt>
+                    <dd>Jaén, España</dd>
+                    <dt><strong>Email:</strong></dt>
+                    <dd>jrc0075@alu.medac.es</dd>
+                </dl>
+
+                <p>Me considero una persona <span>proactiva</span>, con ganas de aprender y mejorar cada día en el
+                    ámbito profesional.</p>
+            </div>
+        </section>
+
+        <!-- Sección de formación -->
+        <section id="formacion">
+            <h2>Formación Académica</h2>
+            <hr>
+            <ol>
+                <li><strong>Técnico Superior en Desarrollo de Aplicaciones Web</strong> - <em>MEDAC Jaén</em> (2025)
+                </li>
+                <li><strong>Curso de Introducción a la Programación</strong> - <em>OpenBootcamp</em> (2023)</li>
+                <li><strong>Bachillerato Tecnológico</strong> - <em>IES Fuente de la Peña</em> (2022)</li>
+            </ol>
+        </section>
+
+        <!-- Sección de habilidades e intereses -->
+        <section id="habilidades">
+            <h2>Habilidades e Intereses</h2>
+            <hr>
+            <div>
+                <ul>
+                    <li><mark>HTML</mark>, CSS y JavaScript</li>
+                    <li>Trabajo en equipo y comunicación efectiva</li>
+                    <li>Diseño web</li>
+                    <li>Interés por la inteligencia artificial y la ciberseguridad</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección multimedia -->
+        <section id="multimedia">
+            <h2>Contenido Multimedia</h2>
+            <hr>
+
+            <p>Imagen relacionada con mi formación:</p>
+            <p>
+                <img src="IMG/html5-logo.png" alt="HTML5 Logo" title="Logo HTML5" width="150" height="150">
+                <img src="IMG/java-logo.png" alt="JAVA Logo" title="Logo JAVA" height="150">
+                <img src="IMG/CSS-Logo.png" alt="CSS Logo" title="Logo CSS" height="150">
+            </p>
+            <p>Ubicación del centro <strong>MEDAC Jaén</strong>:</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.192355262236!2d-3.7858356!3d37.767389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6ddc872fecc6f3%3A0xa4d52e15a3e6905a!2sMEDAC%20Ja%C3%A9n!5e0!3m2!1ses!2ses!4v1692200947320!5m2!1ses!2ses"
+                width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <hr>
+            <p>Puedes visitar mi proyecto en GitHub Pages:</p>
+            <a href="https://github.com/javiiiromeroo06/1DAM_LMSG_Javi" target="_blank">👉 Ver mi perfil en GitHub
+                Pages</a><br>
+        </section>
+
+    </main>
+
+    <footer>
+        <small>© Javier Romero Cantero — Página creada para la asignatura Lenguajes de Marcas</small>
+    </footer>
+
+</body>
+
+</html>
