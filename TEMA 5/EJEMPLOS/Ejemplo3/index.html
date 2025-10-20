@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<!--El method get sirve para enviar tus dates al terminar el formulario-->
+<!--El method post en cambio no envia los datos-->
+
+<body>
+    <form action="proceso.php" method="post">
+        Nombre: <input type="text" name="nombre">
+        <p>
+            <input type="radio" name="sexo" value="h"> Hombre
+            <input type="radio" name="sexo" value="m"> Mujer
+            <input type="radio" name="sexo" value="o"> Otro
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+        <input type="button" value="Hola Mundo" onclick="alert('Bienvenido a mi pagina')">
+    </form>
+</body>
+</html>

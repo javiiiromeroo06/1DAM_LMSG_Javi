@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg-color: #0e1117;
+  --surface: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.15);
+  --text: #e6e6e6;
+  --primary: #4fd1c5;   /* Verde azulado suave */
+  --secondary: #3b82f6; /* Azul moderno */
+  --accent: #10b981;    /* Verde brillante */
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, #0a0d13, #121826);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* === FORMULARIO === */
+form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  padding: 40px 50px;
+  border-radius: 16px;
+  width: 340px;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+form:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* === ETIQUETAS Y CAMPOS === */
+label, p {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary);
+  ba

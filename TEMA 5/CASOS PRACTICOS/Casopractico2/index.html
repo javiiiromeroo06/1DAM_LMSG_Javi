@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="proceso.php" method="post">
+        <fieldset>
+            <legend> Datos Personales </legend>
+
+            Hombre: <input type="text" name="Nombre"><br><br>
+            Edad: <input type="number" name="Edad"><br><br>
+
+            <input type="submit" value="Enviar"
+        </fieldset>
+        <fieldset>
+            <legend> Datos de Interes </legend>
+            <p>
+            Casado: <input type="radio" name="Si" value="s"> Si
+            <input type="radio" name="No" value="n"> No
+            </p>
+            <p>
+            Deportes: <input type="checkbox" name="Baloncesto"> Baloncesto
+            <input type="checkbox" name="Futbol"> Futbol
+            <input type="checkbox" name="Tenis"> Tenis
+            </p>
+            <input type="submit" value="Enviar"
+        </fieldset>
+    </form>
+</body>
+</html>
