@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* ====== Estilo Global ====== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #222222;
+    color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ====== Formulario ====== */
+form {
+    background-color: #1e1e1e;
+    padding: 30px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    width: 400px;
+}
+
+/* ====== Fieldset y Legend ====== */
+fieldset {
+    border: 2px solid #ff7b00;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ff7b00;
+    padding: 0 10px;
+}
+
+/* ====== Inputs, Select y Textarea ====== */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+    color: #e6e6e6;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff7b00;
+    box-shadow: 0 0 8px rgba(255, 123, 0, 0.5);
+    background-color: #333;
+}
+
+/* ====== Radio y Checkbox ====== */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #ff7b00;
+}
+
+/* ====== Labels y párrafos dentro del form ====== */
+p {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: 500;
+}
+
+/* ====== Botón Submit ====== */
+input[type="submit"] {
+    background-color: #ff7b00;
+    color: #1e1e1e;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #e66a00;
+    color: #fff;
+    box-shadow: 0px 0px 12px rgba(255, 123, 0, 0.5);
+}
+
+a {
+    background-color: #ff7b00;
+    color: #1e1e1e;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+/* ====== Placeholder ====== */
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* ====== Select específico ====== */
+select {
+    background-color: #2a2a2a;
+    color: #e6e6e6;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+/* ====== Ajustes de Hobbies y Radios ====== */
+fieldset p,
+fieldset div {
+    margin: 5px 0;
+}
+</style>
+</head>
+<body>
+    <form action="proceso.php" method="post">
+
+        <fieldset>
+            <legend> Datos Personales </legend>
+
+            Nombre: <input type="text" name="Nombre"><br><br>
+            Apellidos: <input type="text" name="Apellidos"><br><br>
+            Edad: <input type="number" name="Edad"> <br> <br>
+            Género: <p></p>
+            <input type="radio" name="Femenino" value="f"> Femenino
+            <input type="radio" name="Masculino" value="m"> Masculino <br>
+        </fieldset>
+        <p>
+
+        </p>
+        <fieldset>
+            <legend> Contacto </legend>
+            <p>
+            Correo electronico: <input type="text" name="Correo"><br><br>
+            Código Postal: <input type="number" name="Postal"><br><br>
+            Dirección: <input type="number" name="Direccion"> <br> <br>
+            Ciudad:
+            <select name="Ciudad" size="1">
+                <option value="1">Sevilla</option>
+                <option value="2">Málaga</option>
+                <option value="3">Jaén</option>
+                <option value="4">Córdoba</option>
+                <option value="5">Almería</option>
+                <option value="6">Cádiz</option>
+                <option value="7">Granada</option>
+                <option value="8">Huelva</option>
+            </select> <br><br>
+            Contraseña: <input type="password" name="password" size="22" maxlength="8" minlength="1" tabindex="1">
+        </fieldset>
+        <fieldset>
+            <legend> Datos de Interés </legend>
+            Casado:
+            <input type="radio" name="Si" value="s"> Si
+            <input type="radio" name="No" value="n"> No
+
+            <br><br>
+
+            Hobbies: <br>
+            <input type="checkbox" name="Baloncesto"> Deporte <br>
+            <input type="checkbox" name="Futbol"> Cine <br>
+            <input type="checkbox" name="Tenis"> Lectura <br>
+            <input type="checkbox" name="Baloncesto"> Cocina <br>
+            <input type="checkbox" name="Futbol"> Fiesta <br>
+            <input type="checkbox" name="Tenis"> Viajar <br>
+
+        </fieldset>
+        <fieldset>
+            <legend> Información Adicional </legend>
+        <p><textarea name="Comentario" rows="4" cols="25" placeholder="Escribe aquí..."></textarea></p>
+        </fieldset>
+        <input type="submit" value="Enviar"> <br><br>
+        <a href="../index.html">Página Principal</a>
+    </form>
+</body>
+</html>
