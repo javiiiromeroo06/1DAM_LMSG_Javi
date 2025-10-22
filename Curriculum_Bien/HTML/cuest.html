@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-    /* ====== Estilo Global ====== */
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #222222;
@@ -19,7 +19,6 @@ body {
     min-height: 100vh;
 }
 
-/* ====== Formulario ====== */
 form {
     background-color: #1e1e1e;
     padding: 30px 30px;
@@ -28,7 +27,6 @@ form {
     width: 400px;
 }
 
-/* ====== Fieldset y Legend ====== */
 fieldset {
     border: 2px solid #ff7b00;
     border-radius: 10px;
@@ -43,7 +41,6 @@ legend {
     padding: 0 10px;
 }
 
-/* ====== Inputs, Select y Textarea ====== */
 input[type="text"],
 input[type="number"],
 input[type="password"],
@@ -71,14 +68,12 @@ textarea:focus {
     background-color: #333;
 }
 
-/* ====== Radio y Checkbox ====== */
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 6px;
     accent-color: #ff7b00;
 }
 
-/* ====== Labels y párrafos dentro del form ====== */
 p {
     margin-bottom: 10px;
 }
@@ -87,7 +82,6 @@ label {
     font-weight: 500;
 }
 
-/* ====== Botón Submit ====== */
 input[type="submit"] {
     background-color: #ff7b00;
     color: #1e1e1e;
@@ -121,16 +115,12 @@ a {
     align-items: center;
 }
 
-
-
-/* ====== Placeholder ====== */
 input::placeholder,
 textarea::placeholder {
     color: #aaa;
     font-style: italic;
 }
 
-/* ====== Select específico ====== */
 select {
     background-color: #2a2a2a;
     color: #e6e6e6;
@@ -138,23 +128,47 @@ select {
     border: 1px solid #333;
 }
 
-/* ====== Ajustes de Hobbies y Radios ====== */
 fieldset p,
 fieldset div {
     margin: 5px 0;
 }
 </style>
 </head>
+
 <body>
+
+    <!--La etiqueta form sirve para comenzar nuestro cuestionario--> 
+
+    <!--action="procesophp serviria para vincular nuestro cuestionario a una base de datos"-->
+
+    <!--method="post" sirve para que no se muestren nuestros datos-->
+
     <form action="proceso.php" method="post">
 
+        <!--La etiqueta fieldset separa los distintos campos de nuestra encuesta-->
+
         <fieldset>
+
+            <!--legend es donde se pone el titulo de nuestro campo de encuesta-->
+
             <legend> Datos Personales </legend>
 
-            Nombre: <input type="text" name="Nombre"><br><br>
-            Apellidos: <input type="text" name="Apellidos"><br><br>
+            <!--Mediante input incluimos todos los diferentes datos que vamos a requerir-->
+            <!--Con type especificamos el tipo de dato que se pide-->
+            <!--Y con name le asignamos un nombre-->
+
+            <!--type="text" para texto solo(utilizo required para que ese campo sea obligatorio)-->
+
+            Nombre: <input required type="text" name="Nombre"><br><br>
+            Apellidos: <input required type="text" name="Apellidos"><br><br>
+
+            <!--type="number para numeros"-->
+
             Edad: <input type="number" name="Edad"> <br> <br>
             Género: <p></p>
+
+            <!--type="radio" crea una pregunta con opciones en la cual eliges una-->
+
             <input type="radio" name="Femenino" value="f"> Femenino
             <input type="radio" name="Masculino" value="m"> Masculino <br>
         </fieldset>
@@ -168,6 +182,9 @@ fieldset div {
             Código Postal: <input type="number" name="Postal"><br><br>
             Dirección: <input type="number" name="Direccion"> <br> <br>
             Ciudad:
+
+            <!--Con la etiqueta select creamos una lista desplegable-->
+
             <select name="Ciudad" size="1">
                 <option value="1">Sevilla</option>
                 <option value="2">Málaga</option>
@@ -178,6 +195,11 @@ fieldset div {
                 <option value="7">Granada</option>
                 <option value="8">Huelva</option>
             </select> <br><br>
+
+            <!--Con type="password" los caracteres que introduzcamos no seran visibles-->
+            <!--maxlength para el maximo de caracteres-->
+            <!--minlength para el minimo de caracteres-->
+
             Contraseña: <input type="password" name="password" size="22" maxlength="8" minlength="1" tabindex="1">
         </fieldset>
         <fieldset>
@@ -187,6 +209,8 @@ fieldset div {
             <input type="radio" name="No" value="n"> No
 
             <br><br>
+
+            <!--type="checkbos" permite dar varias opciones que puedes marcar con un cuadradito-->
 
             Hobbies: <br>
             <input type="checkbox" name="Baloncesto"> Deporte <br>
@@ -199,8 +223,16 @@ fieldset div {
         </fieldset>
         <fieldset>
             <legend> Información Adicional </legend>
+
+        <!--La etiqueta textarea, crea un campo de texto al cual le das el tamaño que necesites con rows y cols-->
+
+        <!--placeholder crea un comentario en color mas clarito dentro del textarea para indicarte por ejemplo donde debes escribir-->
+
         <p><textarea name="Comentario" rows="4" cols="25" placeholder="Escribe aquí..."></textarea></p>
         </fieldset>
+
+        <!--type="submit" para crear el boton con el que envias la encuesta-->
+
         <input type="submit" value="Enviar"> <br><br>
         <a href="../index.html">Página Principal</a>
     </form>
