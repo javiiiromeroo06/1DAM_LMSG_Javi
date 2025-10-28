@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+</head>
+
+<body>
+
+    <h1>Formulario con Controles HTML5</h1>
+
+    <form action="proceso.php" method="post">
+
+        <!-- Email -->
+        <p>Correo electrónico:
+            <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+        </p>
+
+        <!-- URL -->
+        <p>Sitio web personal:
+            <input type="url" id="url" name="url" placeholder="https://www.ejemplo.com">
+        </p>
+
+        <!-- Fecha -->
+        <p>Fecha de nacimiento:
+            <input type="date" id="fecha" name="fecha" required>
+        </p>
+
+        <!-- Color -->
+        <p>Color favorito:
+            <input type="color" id="color" name="color">
+        </p>
+
+        <!-- Número -->
+        <p>Edad:
+            <input type="number" id="numero" name="numero" min="10" max="100" step="1" placeholder="Introduce tu edad">
+        </p>
+
+        <!-- Rango -->
+        <p>Nivel de satisfacción (1-10):
+            <input type="range" id="nivel" name="nivel" min="1" max="10" step="1" value="5">
+        </p>
+
+        <!-- Campo con patrón -->
+        <p>Código postal (5 dígitos):
+            <input type="text" id="codigo" name="codigo" pattern="[0-9]{5}" placeholder="12345" required>
+        </p>
+
+        <!-- Indicadores -->
+        <p>Progreso de registro:
+            <progress id="progreso" value="60" max="100">60%</progress>
+        </p>
+
+        <p>Nivel de experiencia:
+            <meter id="nivelExperiencia" min="0" max="100" low="40" high="80" optimum="90" value="70">70%</meter>
+        </p>
+
+        <button type="submit">Enviar formulario</button>
+    </form>
