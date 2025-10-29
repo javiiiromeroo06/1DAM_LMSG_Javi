@@ -1,0 +1,182 @@
+
+
+body {
+    background-color: rgb(37, 37, 37);
+    color: #ffffff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === CABECERA === */
+header {
+    background: linear-gradient(90deg, rgb(37, 37, 37), #ccff00);
+    color: rgb(37, 37, 37);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 0 8px #ccff00;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background: #ccff00;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: #ffffff;
+    color: rgb(37, 37, 37);
+    box-shadow: 0 0 10px #ccff00;
+}
+
+/* === SECCIÓN PRINCIPAL === */
+section {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin: 2rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    box-shadow: 0 0 25px rgba(204, 255, 0, 0.4);
+}
+
+section h2 {
+    color: #ccff00;
+    border-bottom: 2px solid #ccff00;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+article {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #ccff00;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+/* === IMÁGENES === */
+img {
+    border-radius: 10px;
+    margin: 1rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ccff00;
+}
+
+/* === FIGURE === */
+figure {
+    text-align: center;
+}
+
+figcaption {
+    color: #ccff00;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* === ASIDE === */
+aside {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #ccff00;
+    padding: 1.5rem;
+    margin: 2rem;
+    border-radius: 10px;
+    max-width: 300px;
+    float: right;
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.2);
+}
+
+aside h4 {
+    color: #ccff00;
+    margin-bottom: 0.5rem;
+}
+
+aside p {
+    font-size: 0.9rem;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: rgb(37, 37, 37);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 2px solid #ccff00;
+    margin-top: auto;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #ccff00;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* === ANIMACIONES === */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #ccff00; }
+    50% { text-shadow: 0 0 20px #ccff00; }
+    100% { text-shadow: 0 0 5px #ccff00; }
+}
+
+header h1 {
+    animation: glow 3s infinite;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    section, aside {
+        margin: 1rem;
+    }
+
+    aside {
+        float: none;
+        max-width: 100%;
+    }
+}
+
