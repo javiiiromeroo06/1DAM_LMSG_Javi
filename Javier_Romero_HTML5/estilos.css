@@ -1,0 +1,46 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+}
+
+/* Bordes para distinguir elementos semánticos */
+header { border: 2px solid red; padding: 10px; }
+nav { border: 2px solid blue; padding: 10px; }
+main { border: 2px solid green; padding: 10px; }
+section { border: 2px solid orange; margin: 10px 0; padding: 10px; }
+aside { border: 2px solid teal; padding: 10px; }
+footer { border: 2px solid brown; padding: 10px; text-align: center; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004999;
+}
