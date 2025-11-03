@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles Multimedia</title>
+</head>
+
+<body>
+    <h1>Controles Multimedia</h1>
+
+    <h2>Ejemplo de audio</h2>
+    <audio controls autoplay loop muted>
+        <source src="audio/musica.mp3" type="audio/mpeg">
+        <source src="audio/musica.ogg" type="audio/ogg">
+        Tu navegador no soporta el elemento <code>audio</code>.
+    </audio>
+
+    <h2>Ejemplo de video</h2>
+    <video width="480" height="270" controls poster="imagenes/portada-video.jpg">
+        <source src="videos/ejemplo.mp4" type="video/mp4">
+        <source src="videos/ejemplo.webm" type="video/webm">
+        Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+
+    <h2>Video incrustado de YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+</body>
+
+</html>
