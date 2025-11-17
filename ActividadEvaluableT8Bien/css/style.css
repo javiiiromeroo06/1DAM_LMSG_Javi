@@ -1,0 +1,115 @@
+*{
+
+}
+body{
+    background-color: rgb(186, 175, 255);
+}
+
+#menu{
+    list-style-type: none;
+    background-color: rgb(186, 175, 255);
+    word-spacing: 25px;
+    padding: 8px;
+    text-align: right;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: chartreuse;
+    color: rgb(255, 0, 123);
+}
+
+#menu li{
+    display: inline-block;
+}
+
+#contenido{
+            
+    background-image:url("../IMG/Fondo.jpg");     
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: 750px 650px;   
+    background-color: rgb(255, 255, 255);    
+    width: 50%;   
+    border:solid 2px rgb(0, 4, 255);
+    padding: 20px;
+    margin-left: 25%;}
+
+#titulo{
+    color: rgb(0, 4, 255);
+    border: solid 2px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    background-color: rgb(186, 175, 255);
+}
+
+.subtitulo{
+    color: rgb(0, 4, 255);
+    border: solid 2px;
+    padding: 5px;
+    background-color:rgb(186, 175, 255);
+}
+
+table{
+    caption-side: bottom;
+    border-spacing: 0px;
+    width: 100%;
+    border: solid 1px rgb(0, 4, 255);   
+}
+
+tr:hover{
+    background-color: chartreuse;
+    color: rgb(255, 0, 123);  
+}
+
+th, td{
+    border: solid 1px rgb(0, 4, 255);
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;    
+    color:rgb(0, 4, 255); 
+}
+
+tr:nth-child(3){
+    background-color: rgb(186, 175, 255);
+}
+
+tr:nth-child(5){
+    background-color: rgb(186, 175, 255);
+}
+
+th{
+    background-color: rgb(186, 175, 255);
+    color: red;
+    font-size: 20px;
+}
+
+#lista li:first-child{
+    color: rgb(0, 4, 255);
+}
+
+#lista li:last-child{
+    color: rgb(0, 4, 255);
+}
+
+#lista li::first-letter{
+    text-transform: uppercase;
+}
+
+#autor::after{
+    content: "Javier Romero Cantero";
+}
+#autor{
+    color:rgb(0, 4, 255);
+    text-align: center;
+}
+
+caption{
+    color:rgb(0, 4, 255);
+}
