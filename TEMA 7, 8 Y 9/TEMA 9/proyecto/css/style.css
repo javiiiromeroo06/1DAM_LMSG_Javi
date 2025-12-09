@@ -1,0 +1,256 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+/* mandatory */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  line-height: 1.4;
+  background: linear-gradient(to bottom right, #f0f4ff, #fffaf0);
+  color: #222;
+}
+
+/* Header & nav */
+header {
+  background: #111;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+  /* demonstrates relative */
+}
+
+.brand {
+  font-family: 'Righteous', cursive;
+  font-size: 1.6rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  display: inline-block;
+  transition: background 0.25s, transform 0.2s;
+}
+
+nav a:hover {
+  background: rgb(180, 30, 210);
+  transform: translateY(-2px);
+}
+
+/* Ejemplos dropdown */
+.nav-ejemplos {
+  position: relative;
+}
+
+.nav-ejemplos ul {
+  position: absolute;
+  top: 2.8rem;
+  left: 0;
+  background: #222;
+  padding: 0.5rem;
+  display: none;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.nav-ejemplos:hover ul {
+  display: block;
+}
+
+.nav-ejemplos a {
+  white-space: nowrap;
+}
+
+/* Main layout */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.hero {
+  background: url('../img/paisaje.jpg') center/cover no-repeat;
+  height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Examples preview grid */
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Footer fixed (demonstrates fixed position) */
+footer {
+  background: #111;
+  color: #ddd;
+  padding: 1rem 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0.9rem;
+}
+
+/* ------- Example-specific helpers ------- */
+
+/* ejemplo_disposicion */
+.disp-box {
+  width: 120px;
+  height: 80px;
+  display: inline-block;
+  margin: 6px;
+  background: linear-gradient(135deg, #ffefba, #ffc3a0);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* posicionamiento_flotante */
+.float-img {
+  float: left;
+  width: 180px;
+  margin: 0 1rem 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* menu_horizontal example */
+.menu-demo {
+  background: #000;
+  overflow: hidden;
+}
+
+.menu-demo ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.menu-demo li {}
+
+.menu-demo a {
+  color: #fff;
+  display: block;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+}
+
+.menu-demo a:hover {
+  background: chocolate;
+}
+
+/* propiedades_css3 demo */
+.css3-demo {
+  padding: 1rem;
+  background: linear-gradient(90deg, #e0f7fa, #ffebee);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.round {
+  border-radius: 18px;
+}
+
+.shaded {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.transparent {
+  opacity: 0.85;
+}
+
+.multicol {
+  column-count: 2;
+  column-gap: 1.2rem;
+  column-rule: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+/* viajes_frecuentes layout using floats */
+.article {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: auto;
+}
+
+.article img {
+  width: 160px;
+  border-radius: 8px;
+  float: left;
+  margin-right: 1rem;
+}
+
+/* banner_mascarilla (absolute positioning) */
+.banner {
+  position: relative;
+  height: 140px;
+  background: radial-gradient(circle at 20% 30%, #cfe9ff, #a0d6ff);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner .mask {
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+  width: 220px;
+  transform: rotate(-6deg);
+}
+
+/* small responsive tweak */
+@media (max-width:600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    background: #111;
+    position: fixed;
+    top: 60px;
+    left: -9999px;
+  }
+
+  nav.open ul {
+    left: 0;
+  }
+
+  .hero {
+    height: 140px;
+  }
+
+  .multicol {
+    column-count: 1;
+  }
+}

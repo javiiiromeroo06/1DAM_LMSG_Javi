@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Web - Tema 9 (Ejemplo)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Page specific */
+    .hero-big { height:260px; border-radius:12px; background: linear-gradient(135deg,#8ec5ff,#e0c3fc); display:flex; align-items:center; justify-content:center; color:#033; margin-bottom:1rem; }
+    .features { display:flex; gap:1rem; margin-bottom:1rem; }
+    .feat { flex:1; padding:1rem; border-radius:12px; background:#fff; transform: translateY(0); transition: transform 0.3s; }
+    .feat:hover { transform: translateY(-8px) rotate(-1deg) scale(1.02); }
+    .two-cols { display:flex; gap:1rem; }
+    .left { flex:2; }
+    .right { flex:1; background:#fff; padding:1rem; border-radius:10px; height:200px; position:relative; }
+    .badge { position:absolute; top:-18px; right:-18px; background:chocolate; color:white; padding:0.6rem 0.9rem; border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,0.18); transform: rotate(12deg); }
+    .multicol { column-count:2; column-gap:1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Mi Web - Cine y Series</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Volver</a></li>
+        <li><a href="#seccion">Secciones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero-big">
+      <h1 style="font-family:'Righteous', cursive; text-shadow: 3px 3px 8px rgba(0,0,0,0.25);">Cine y Series - Guía visual</h1>
+    </div>
+
+    <div class="features">
+      <div class="feat round shaded">
+        <h3>Recomendadas</h3>
+        <p class="multicol">Aquí hay texto distribuido en dos columnas para demostrar <code>column-count</code>. Puedes ver como el contenido fluye y muestra la regla entre columnas.</p>
+      </div>
+      <div class="feat round shaded transparent">
+        <h3>Top actores</h3>
+        <p>Tarjetas con <code>box-shadow</code>, <code>border-radius</code> y opacidad aplicada.</p>
+      </div>
+    </div>
+
+    <div class="two-cols">
+      <section class="left">
+        <article class="article">
+          <h2 style="text-shadow:2px 2px 6px rgba(0,0,0,0.1);">Artículo destacado</h2>
+          <img src="../img/movie.jpg" alt="pelicula" style="width:220px; float:right; margin-left:1rem; border-radius:8px;">
+          <p>Texto de ejemplo que utiliza floats para alinear imágenes. Este artículo demuestra además transformaciones en hover.</p>
+          <p style="clear:both;"></p>
+        </article>
+      </section>
+      <aside class="right">
+        <div class="badge">Top</div>
+        <h4>Enlaces útiles</h4>
+        <ul>
+          <li><a href="#">Críticas</a></li>
+          <li><a href="#">Noticias</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>Autor: Alumno/a • Mi web de práctica • (Ejemplos CSS3)</footer>
+</body>
+</html>
