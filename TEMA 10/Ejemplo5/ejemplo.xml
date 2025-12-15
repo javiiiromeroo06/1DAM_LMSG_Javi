@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="file.css" type="text/css"?>
+<!DOCTYPE biblioteca SYSTEM "ejemplo_dtd.dtd">
+<biblioteca>
+    <libro>
+        <nombre>Introduccion a XML</nombre>
+        <autor>Pedro Martinez</autor>
+        <editorial>Paraninfo</editorial>
+        <paginas>345</paginas>
+        <precio>45</precio>
+    </libro>
+
+    <libro>
+        <nombre>CSS 3</nombre>
+        <autor>Luis Ruiz</autor>
+        <editorial>Sintesis</editorial>
+        <paginas>234</paginas>
+        <precio_con_iva>45</precio_con_iva>
+    </libro>
+
+    <libro>
+        <nombre>El Señor de los Anillos</nombre>
+        <autor>Tolkien</autor>
+        <paginas>234</paginas>
+        <precio_con_iva>34</precio_con_iva>
+    </libro>
+</biblioteca>
