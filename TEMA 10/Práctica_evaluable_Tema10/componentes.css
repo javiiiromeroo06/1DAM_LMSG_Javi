@@ -1,0 +1,33 @@
+/**Javier Romero Cantero**/
+*{
+    box-sizing: border-box;
+    display: block;
+}
+listacomponentes {
+  width: 300px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: solid 3px blue;
+}
+
+listacomponentes:before {
+  display: block;
+  content: "Componentes de Informática";
+  color: white;
+  background-color: black;
+  width: 280px;
+}
+
+fabricante {
+  border-bottom: solid 1px black;
+}
+
+tienda {
+  border-bottom: solid 1px black;
+}
+
+componente {
+  border-bottom: solid 1px black;
+}
+
