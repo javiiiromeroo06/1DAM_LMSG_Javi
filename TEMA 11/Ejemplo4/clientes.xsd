@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<:schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+    <xs:element name = "listaClientes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "cliente" maxOccurs = "unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name = "nombre" type = "xs:string"></xs:element>
+                            <xs:element name = "apellido" type = "xs:string"></xs:element>
+                            <xs:choice>
+                                <xs:element name = "dni" type = "xs:string"></xs:element>
+                                <xs:element name = "nie" type = "xs:string"></xs:element>
+                            </xs:choice>
+                            <xs:element name = "compras" type = "xs:integer"></xs:element>
+                            <xs:element name = "regalo" type = "xs:string" minOccurs = "0"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name = "español" type = "xs:string" use = "required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+   <!-- TIPOS PERSONALIZADOS -->
+    <!-- Longitud DNI -->
+     <xs:simpleType name = "tipodni">
+        <xs:restriction base = "xs:string">
+            <xs:lenght value = "9"></xs:lenght>
+        </xs:restriction>     
+    </xs:simpleType>
+
+    <xs:simpleType name = "tipocompra">
+        <xs:restriction base = "xs:integer">
+            <xs:minInclusive value = "3000"></xs:minInclusive>
+            <xs:maxInclusive value = "5000"></xs:maxInclusive>
+        </xs:restriction>     
+    </xs:simpleType>
+
+</xs:schema>
