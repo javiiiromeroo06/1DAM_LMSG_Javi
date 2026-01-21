@@ -24,6 +24,7 @@
 
    <!-- TIPOS PERSONALIZADOS -->
     <!-- Longitud DNI -->
+     
      <xs:simpleType name = "tipodni">
         <xs:restriction base = "xs:string">
             <xs:lenght value = "9"></xs:lenght>
@@ -34,6 +35,15 @@
         <xs:restriction base = "xs:integer">
             <xs:minInclusive value = "3000"></xs:minInclusive>
             <xs:maxInclusive value = "5000"></xs:maxInclusive>
+        </xs:restriction>     
+    </xs:simpleType>
+
+    <xs:simpleType name = "tipoespañol">
+        <xs:restriction base = "xs:integer">
+            <xs:enumeration value = "si"></xs:minInclusive>
+            <xs:enumeration value = "no"></xs:maxInclusive>
+            <xs:enumeration value = "SI"></xs:minInclusive>
+            <xs:enumeration value = "NO"></xs:maxInclusive>
         </xs:restriction>     
     </xs:simpleType>
 
