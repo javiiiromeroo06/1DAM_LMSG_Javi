@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></xs:schema>
     <xs:element name = "concesionario">
         <xs:complexType>
             <xs:sequence>

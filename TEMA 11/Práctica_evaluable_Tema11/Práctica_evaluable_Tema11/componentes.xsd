@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Javier Romero Cantero-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listacomponentes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "componente" maxOccurs = "unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name = "marca" type = "xs:string"></xs:element>
+                            <xs:element name = "modelo" type = "xs:string"></xs:element>
+                            <xs:element name = "categoria" type = "xs:string"></xs:element>
+                            <xs:element name = "precio" type = "xs:decimal" minOccurs = "0" maxOccurs = "300"></xs:element>
+                            <xs:choice>
+                                <xs:element name = "stock" type = "xs:unsignedShort"></xs:element>
+                                <xs:element name = "cantidad" type = "xs:unsignedShort"></xs:element>
+                            </xs:choice>
+                            <xs:element name = "fecha_alta" type = "xs:date" use = "required"></xs:element>
+                            <xs:element name = "garantia" type = "xs:integer" minOccurs = "6" maxOccurs = "60"></xs:element>
+                            <xs:element name = "color" type = "xs:string"></xs:element>
+                            <xs:element name = "cliente_reserva" type = "xs:string"></xs:element>
+                            <xs:element name = "extras" type = "xs:string"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name = "tipo" type = "xs:string" use = "required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- TIPOS PERSONALIZADOS-->
+    <!-- Valores de categoria-->
+
+    <xs:simpleType name = "tipocategoria">
+        <xs:restriction base = "xs:integer">
+            <xs:enumeration value = "CPU"></xs:enumeration>
+            <xs:enumeration value = "GPU"></xs:enumeration>
+            <xs:enumeration value = "RAM"></xs:enumeration>
+        </xs:restriction>     
+    </xs:simpleType>
+
+    <!-- Restriccion de precio-->
+
+    <xs:simpleType name = "tipoprecio">
+        <xs:restriction base = "xs:decimal">
+            <xs:minInclusive value = "3000"></xs:minInclusive>
+            <xs:maxInclusive value = "5000"></xs:maxInclusive>
+        </xs:restriction>     
+    </xs:simpleType>
+
+    <!-- Valores de dni-->
+
+    <xs:simpleType name="tipodni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value = "\d{8}[A-Z]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Extras-->
+
+    <xs:simpleType name="tipoextras">
+        <xs:list itemType="xs:string"></xs:list>
+    </xs:simpleType>
+
+    <xs:simpleType name="tresextras">
+        <xs:restriction base="tipoextras">
+            <xs:maxInclusive value = "2"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
